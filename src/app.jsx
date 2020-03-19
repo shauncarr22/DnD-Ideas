@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/Home.jsx';
 import Gen from './components/Gen.jsx';
-import Nav from './components/Nav.jsx'
+import NavBar from './components/Nav.jsx'
 
 class App extends Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Nav/>
+                <NavBar/>
                 <Route exact path="/" component={Home}/>
                 <Route path='/generate' component={Gen}/> 
             </BrowserRouter>

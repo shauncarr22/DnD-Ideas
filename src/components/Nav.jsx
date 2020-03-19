@@ -1,14 +1,14 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
-const Nav = () => {
+const NavBar = () => {
     return (
         <div>
        <header>
-           <h1><Link to="/">DnD Ideas</Link></h1>
+           <h1 className="logo"><Link to="/">DnD Ideas</Link></h1>
            <nav>
-               <ul>
+               <ul className="nav__links">
                    <li><Link to="/generate">Generate</Link></li>
                </ul>
            </nav>
@@ -17,4 +17,4 @@ const Nav = () => {
     )
 };
 
-export default Nav;
+export default NavBar;
