@@ -25,3 +25,39 @@
 }
 
 /* NavBar End */
+
+/* Home Page */
+
+.Title__Home {
+    text-align: center;
+}
+
+.Home__P {
+    text-align: center;
+}
+
+/* Home Page End */
+
+/* Generate Page */
+.Title__Gen {
+    text-align: center;
+}
+
+.Gen__P {
+    text-align: center;
+}
+
+.Gen__Div {
+    display: flex;
+    justify-content: center;
+}
+
+/* Generate End */
+
+/* Discovery Page */
+
+.Title__Dis {
+    text-align: center;
+}
+
+/* Discovery Page End */
