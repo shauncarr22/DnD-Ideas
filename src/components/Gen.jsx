@@ -24,8 +24,12 @@ class Gen extends React.Component {
     render() {
         let p 
         if(this.state.loading === false){
-            p = <p className="Gen__Story">This is working</p>
-        }
+        p = <div>
+            <p className="Gen__Story">Boss: {this.state.story[0]}</p>
+            <p className="Gen__Story">Motive: {this.state.story[1]}</p>
+            <p className="Gen__Story">World: {this.state.story[2]}</p>
+            </div>
+        } 
         return (
             <div>
                 <div>
