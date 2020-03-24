@@ -47,4 +47,18 @@ app.post('/saveStory', (req,res) => {
    });
 });
 
+app.get('/getAll', (req,res) => {
+    MongoClient.connect(`mongodb://localhost:27017/DnDIdeas`, (err,client) => {
+        if(err) console.error(err);
+
+        const db = client.db('DnDIdeas');
+
+        db.collection('ideas').find().toArray((err,result) => {
+            if(err) console.error(err);
+
+            res.send(result);
+        });
+    });
+});
+
 app.listen(port, () => console.log(`listening from port: ${port}`));
