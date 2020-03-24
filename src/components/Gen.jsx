@@ -21,6 +21,21 @@ class Gen extends React.Component {
         });
     };
 
+    saveStory(){
+        if(this.state.loading === true){
+            console.log('no story to save');
+        } else {
+            Axios.post(`http://localhost:5000/saveStory`, {
+                Boss: `${this.state.story[0]}`,
+                Motive: `${this.state.story[1]}`,
+                World: `${this.state.story[2]}`
+            })
+            .then((res) => {
+                console.log('story saved');
+            });
+        };
+    };
+
     render() {
         let p 
         if(this.state.loading === false){
@@ -46,6 +61,9 @@ class Gen extends React.Component {
                 <br/>
                 <div className="Gen__Div">
                     <button onClick={this.GetStory.bind(this)}>Generate</button>
+                </div>
+                <div className="Gen__Save">
+                    <button onClick={this.saveStory.bind(this)}>Save</button>
                 </div>
             </div>
         );

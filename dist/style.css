@@ -56,6 +56,11 @@
     text-align: center
 }
 
+.Gen__Save {
+    display: flex;
+    justify-content: center;
+}
+
 /* Generate End */
 
 /* Discovery Page */

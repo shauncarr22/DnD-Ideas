@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const BodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient
+const Idea = require('/Users/laskey/Documents/DnDideas/db/index.js')
 const app = express();
 
 const port = 5000;
@@ -22,6 +24,27 @@ app.get('/getStory', (req,res) => {
 
     res.send(story)
 
+});
+
+app.post('/saveStory', (req,res) => {
+   MongoClient.connect(`mongodb://localhost:27017/DnDIdeas`, (err,client) => {
+    if(err) console.error(err);
+    
+    const db = client.db('DnDIdeas');
+
+    const {Boss, Motive, World} = req.body;
+
+    const newIdea = new Idea({
+        Boss,
+        Motive,
+        World
+    });
+
+    newIdea.save();
+
+    res.send('Idea Saved');
+
+   });
 });
 
 app.listen(port, () => console.log(`listening from port: ${port}`));
