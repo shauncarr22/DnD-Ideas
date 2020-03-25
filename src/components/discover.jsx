@@ -17,6 +17,7 @@ class Discover extends React.Component {
                 loading: false,
                 stories: data.data
             });
+            console.log(this.state.stories)
         });
     };
 
@@ -26,7 +27,11 @@ class Discover extends React.Component {
             p = <div>{this.state.stories.map((el,i) => {
                 return (
                     <div>
-                        <p>{el}</p>
+                        <p className='Dis__Boss'>{el.Boss}</p>
+                        <p className='Dis__Motive'>{el.Motive}</p>
+                        <p className='Dis__World'>{el.World}</p>
+                        <br/>
+                        <br/>
                     </div>
                 );
             })}</div>
