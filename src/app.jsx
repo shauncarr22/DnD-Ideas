@@ -4,6 +4,7 @@ import Home from './components/Home.jsx';
 import Gen from './components/Gen.jsx';
 import NavBar from './components/Nav.jsx'
 import Discover from './components/discover.jsx';
+import Contact from './components/contact.jsx'
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route path='/generate' component={Gen}/> 
                 <Route path="/discover" component={Discover}/>
+                <Route path='/contact' component={Contact}/>
             </BrowserRouter>
         )
     }

@@ -18,7 +18,9 @@ app.use(BodyParser.json());
 app.get('/getStory', (req,res) => {
     const boss = ['The Slave Lords', 'Zargon', 'Strahd von Zarovich', 'Verminaard', 'Goblin King', 'The Unkown Wizard', 'The Prince', 'The Elders']
     
-    const motive = ['To prove that Zadera is dead', 'To kill all the humans and let night creatures reclaim earth', 'to bring fourth the darkness', 'the dark father demands it', 'The High council thinks they are the true rules of all living things']
+    const motive = ['To prove that their god is dead', 'To kill all the humans and let night creatures reclaim earth', 'to bring fourth the darkness', 'the dark father demands it', 
+    'The High council thinks they are the true rules of all living things', 'to become famous', 'to become rich', 'to obtain a lengendary item', 'obession with research', 'Revenge for ???', 'Thrill of conquest', 'Failing into reverse', 
+    'to instill anarchy', 'teen angst']
     
     const world = ['post-apotyltic', 'steampunk', 'dark-ages', 'golden-age', 'the silver-age', 'industerial revloution']
 
